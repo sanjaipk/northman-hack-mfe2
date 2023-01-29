@@ -184,5 +184,8 @@
 			}
 		}
 	},
-	"defaultProject": "northman-testing-shell2"
+  "defaultProject": "northman-testing-shell2",
+  "cli": {
+    "analytics": "e2dba344-5d68-45db-a1ed-327b17503b64"
+  }
 }
