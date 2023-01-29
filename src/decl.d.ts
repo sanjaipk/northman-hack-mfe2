@@ -1,0 +1,1 @@
+declare module 'northmanTesting2/Tab1PageModule';

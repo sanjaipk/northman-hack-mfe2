@@ -1,7 +1,9 @@
-import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
+import { loadRemoteEntry } from '@angular-architects/module-federation';
 
-import { AppModule } from './app/app.module';
-
-
-platformBrowserDynamic().bootstrapModule(AppModule)
-  .catch(err => console.error(err));
+Promise.all([
+   // loadRemoteEntry({ type: 'module', remoteEntry: 'http://localhost:3000/remoteEntry.js'})
+   loadRemoteEntry({ type: 'module', remoteEntry: 'https://mfe1.z20.web.core.windows.net/remoteEntry.js'})
+])
+.catch(err => console.error('Error loading remote entries', err))
+.then(() => import('./bootstrap'))
+.catch(err => console.error(err));
