@@ -20,7 +20,7 @@ export class Tab1Page  implements OnInit {
 
       const m = await loadRemoteModule({
         type: 'module',
-        remoteEntry: 'https://samfe1.z13.web.core.windows.net/',
+        remoteEntry: 'https://samfe1.z13.web.core.windows.net/remoteEntry.js',
         exposedModule: './HomeComponent'
       });
 
@@ -32,7 +32,7 @@ export class Tab1Page  implements OnInit {
     console.log('adding new element');
     const m = await loadRemoteModule({
       type: 'module',
-      remoteEntry: 'https://samfe1.z13.web.core.windows.net/',
+      remoteEntry: 'https://samfe1.z13.web.core.windows.net/remoteEntry.js',
       exposedModule: './HomeComponent'
     });
 
