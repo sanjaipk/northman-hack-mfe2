@@ -1,0 +1,32 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title> Microfront-end Horizontal Split </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Microfront-end Horizontal Split </ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <div id="container">
+    <br /><br /><br /><br /><br /><br />
+    <bh-secondary-button buttonLabel="Load!" (click)="load()"></bh-secondary-button>
+    <br /><br /><br /><br />
+    <div>
+      In the logical approach, split the same view into multiple front-ends
+      based on the logical differences. For example, the recommendations view of
+      Netflix can be a micro-frontend that is developed by a different team.
+      Dividing the existing view into multiple parts is known as a horizontal
+      split.
+    </div>
+  </div>
+  <div #placeHolder></div>
+  <div style="display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 30px;">
+  <div #placeHolder2 style="display:none">test</div>
+</div>
+  <!-- <app-explore-container name="Tab 1 page"></app-explore-container> -->
+</ion-content>

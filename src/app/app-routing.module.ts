@@ -5,7 +5,12 @@ import { HomeComponent } from './home/home.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 
 export const APP_ROUTES: Routes = [
- {
+  {
+    path: '',
+    loadChildren: () =>
+      import('./tabs/tabs.module').then((m) => m.TabsPageModule),
+  },
+  {
     path: 'flights',
     loadChildren: () => {
       return loadRemoteModule({
@@ -14,11 +19,6 @@ export const APP_ROUTES: Routes = [
         exposedModule: './Tab1PageModule'
       })
       .then(m => m.Tab1PageModule) }
-  },
-  {
-    path: '',
-    redirectTo: '/flights',
-    pathMatch: 'full'
   }
 ];
 @NgModule({
